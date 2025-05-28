@@ -1,2 +1,46 @@
 Keybinding:
+--- Basic vim keys
+- Search a word and change
+to search, n to next, N to previous
+ciw to remove the word and insert new one, then press . on the next match
+to apply the same change.
+:%s/old/new/gc change all the matching old words to new one with prompt for the change.
 
+ciw = change in word
+viw = visual in word
+
+:reg open the registory to list the yanks and deletions to choose to put somewhere else.
+"4p puts the register 4 in the cursor
+
+--- Themery
+"n", "<leader>tt" - Open themery
+
+--- LazyGit
+"n", "<leader>gp" - Preview the current unstaged changes
+"n", "<leader>gt" - Toggle current line blame
+"n", "<leader>lg" - Open LazyGit
+
+--- Pane manipulation
+"n", "<leader>sv" - Split window vertically
+"n", "<leader>sh" - Split window horisontally
+"n", "<leader>se" - Make splits equal size
+"n", "<C-h>" - Switch pane left
+"n", "<C-j>" - Switch pane down
+"n", "<C-k>" - Switch pane up
+"n", "<C-l>" - Switch pane right
+"n", "<C-q>" - Close current Split
+
+--- Buffers
+"n", "<S-l>" - Next Buffer
+"n", "<S-h>" - Previous Buffer
+"n", "<S-q>" - Close current Buffer
+
+--- Telescope and NeoTree
+"n", "<leader>ff" - Find files
+"n", "<leader>fb" - Find Buffers 
+"n", "<leader>fg" - Find Greps
+"n", "<leader>fe" - Toggle file explorer
+"n", "<leader>lf" - Find Greps
+
+--- Terminal
+"{n, t}", "A-Space" - Toggle terminal
