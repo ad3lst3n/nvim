@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
-
+require("plugins.colorscheme")
 require("options")
 require("lazy").setup("plugins")
 
@@ -24,6 +24,9 @@ vim.diagnostic.config({
   float = {
     source = "always",
     border = "single",
+  },
+  change_detection = {
+    notify = false,
   },
   -- Severity-based configuration
   severity_sort = true,

@@ -33,4 +33,19 @@ return {
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 		end,
 	},
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		lazy = false,
+		config = function()
+			local mason_tool_installer = require("mason-tool-installer")
+			require("mason-tool-installer").setup({
+				ensure_installed = {
+					"stylua",
+					"black",
+					"isort",
+					"google-java-format",
+				},
+    		})
+  		end,
+	}
 }
