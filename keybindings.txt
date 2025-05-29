@@ -12,6 +12,10 @@ viw = visual in word
 :reg open the registory to list the yanks and deletions to choose to put somewhere else.
 "4p puts the register 4 in the cursor
 
+--- Code Companion / LSP / Linters / Formatters
+"n", "<leader>v" - Open code companion
+
+
 --- Themery
 "n", "<leader>tt" - Open themery
 
@@ -44,3 +48,18 @@ viw = visual in word
 
 --- Terminal
 "{n, t}", "A-Space" - Toggle terminal
+
+["<C-b>"] = cmp.mapping.scroll_docs(-4),
+["<C-f>"] = cmp.mapping.scroll_docs(4),
+["<C-Space>"] = cmp.mapping.complete(),
+["<C-e>"] = cmp.mapping.abort(),
+["<CR>"] = cmp.mapping.confirm({ select = true }),
+
+"n", "K" - Hover
+"n", "<leader>gd" - Definition
+"n", "<leader>gr" - References
+"n", "<leader>ca" - Code Action
+"n", "<leader>gf" - Format
+
+--- UndoTree
+"n", "<leader>u" - Open Undo tree
