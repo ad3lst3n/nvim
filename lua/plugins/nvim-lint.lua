@@ -1,3 +1,4 @@
+-- ~/.config/nvim/lua/plugins/nvim-lint.lua
 return {
     "mfussenegger/nvim-lint",
     event = {
@@ -7,8 +8,10 @@ return {
     config = function()
       local lint = require("lint")
 
+      -- Define linters for specific filetypes
       lint.linters_by_ft = {
-        java = {"checkstyle"}
+        java = {"checkstyle"},
+        python = {"flake8"},
       }
 
       local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
