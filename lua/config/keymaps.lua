@@ -17,6 +17,13 @@ keymap.set("n", "<C-k>", "<C-w>k", { desc = "Switch pane up" })
 keymap.set("n", "<C-j>", "<C-w>j", { desc = "Switch pane down" })
 keymap.set("n", "<C-q>", "<cmd>close<CR>", { desc = "Close current split" })
 
+keymap.set("n", "<A-Space>", function()
+  vim.cmd("FloatermToggle")
+end, { desc = "Toggle Terminal" })
+
+keymap.set("t", "<A-Space>", function()
+  vim.cmd("FloatermToggle")
+end, { desc = "Toggle Terminal" })
 
 -- Switching buffers
 keymap.set("n", "<S-l>", "<CMD>bnext<CR>")
@@ -37,21 +44,20 @@ keymap.set("v", "<S-Tab>", "<", { desc = "De-indent visual selection" })
 
 keymap.set("i", "<S-Tab>", "<", { desc = "De-indent in insert" })
 
-
 -- Go to next diagnostic (Warning or Error), wrap around file, and show in float
 keymap.set("n", "J", function()
-	vim.diagnostic.goto_next({
-		--     severity = {min = vim.diagnostic.severity.WARN},
-		wrap = true,
-		float = true,
-	})
+  vim.diagnostic.goto_next({
+    --     severity = {min = vim.diagnostic.severity.WARN},
+    wrap = true,
+    float = true,
+  })
 end, { desc = "Go to next warning/error" })
 
 -- Go to previous diagnostic (Warning or Error), wrap around file, and show in float
 keymap.set("n", "K", function()
-	vim.diagnostic.goto_prev({
-		-- severity = {min = vim.diagnostic.severity.WARN},
-		wrap = true,
-		float = true,
-	})
+  vim.diagnostic.goto_prev({
+    -- severity = {min = vim.diagnostic.severity.WARN},
+    wrap = true,
+    float = true,
+  })
 end, { desc = "Go to previous warning/error" })
