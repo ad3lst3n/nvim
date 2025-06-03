@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
-
+vim.g.maplocalleader = " "
+vim.g.have_nerd_font = true
 local keymap = vim.keymap
 -- Basic Navigation
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })

@@ -4,6 +4,11 @@ return {
 	},
   {
     "github/copilot.vim",
+    config = function()
+      vim.g.copilot_no_tab_map = true
+      vim.keymap.set("i", "<C-A>", 'copilot#Accept("<CR>")', { expr = true, silent = true, desc = "Accept Copilot suggestion" })
+      vim.keymap.set("i", "<C-D>", 'copilot#Dismiss()', { expr = true, silent = true, desc = "Dismiss Copilot suggestion" })
+    end,
   },
 	{
 		"L3MON4D3/LuaSnip",

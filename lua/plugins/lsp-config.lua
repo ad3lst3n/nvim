@@ -105,6 +105,12 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		lazy = false, -- Or true with event = "VeryLazy" or "LspAttach"
+		dependencies = {
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
+			{ "j-hui/fidget.nvim", opts = {} },
+		},
 		config = function()
 			-- Server setups and keymaps are now primarily handled by mason-lspconfig and on_attach.
 			-- This space can be used for global LSP settings or diagnostics customization
@@ -133,5 +139,5 @@ return {
 				-- auto_update = true, -- Consider enabling if you want tools to auto-update
 			})
 		end,
-	}
+	},
 }
