@@ -10,11 +10,6 @@ keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horisontally" })
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
 
--- Pane navigation
-keymap.set("n", "<C-h>", "<C-w>h", { desc = "Switch pane left" })
-keymap.set("n", "<C-l>", "<C-w>l", { desc = "Switch pane right" })
-keymap.set("n", "<C-k>", "<C-w>k", { desc = "Switch pane up" })
-keymap.set("n", "<C-j>", "<C-w>j", { desc = "Switch pane down" })
 keymap.set("n", "<C-q>", "<cmd>close<CR>", { desc = "Close current split" })
 
 keymap.set("n", "<A-Space>", function()
@@ -26,8 +21,6 @@ keymap.set("t", "<A-Space>", function()
 end, { desc = "Toggle Terminal" })
 
 -- Switching buffers
-keymap.set("n", "<S-l>", "<CMD>bnext<CR>")
-keymap.set("n", "<S-h>", "<CMD>bprevious<CR>")
 keymap.set("n", "<S-q>", "<CMD>:Bdelete<CR>", { desc = "Close buffer" })
 
 -- Indent current line with Tab in normal mode
